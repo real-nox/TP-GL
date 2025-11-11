@@ -1,3 +1,4 @@
+//Ex qui calcule la valeur absolue d'un nombre
 #include <stdio.h>
 
 int main() {
@@ -7,6 +8,9 @@ int main() {
     scanf("%d", &a);
 
     if (a < 0)
-        abs = -a;
+        abs = a;
+    else 
+        abs = a;
+
     printf("La valeur absolue de %d est : x=%d", a, abs);
 }
