@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     int s = 0;
@@ -10,7 +11,7 @@ int main() {
     } while(n<1);
 
     for (int k=1; k<=n;k++)
-        s = k*k + s;
+        s = pow(k, 2) + s;
     
     printf("Le resultat est : %d", s);
 }

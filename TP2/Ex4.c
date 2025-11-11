@@ -1,6 +1,29 @@
+//Calculatrice
 #include <stdio.h>
 
-int calculator() {
+void calculator(double a, double b, char op) {
+    switch (op)
+    {
+    case '+':
+        printf("La somme est : %.2lf\n", a+b);
+        break;
+    case '-':
+        printf("La difference est : %.2lf\n", a-b);
+        break;
+    case '*':
+        printf("Le profuit est : %.2lf\n", a*b);;
+        break;
+    case '/':
+        b==0 ? printf("On ne peut pas diviser par 0") : printf("La division est : %.2lf\n", a/b);
+        break;
+    default:
+        printf("Vous n'avez pas choisi le bon opperateur arithmetique\n");
+        break;
+    }
+}
+
+int main() {
+    printf("\nLa calculatrice :\n");
     double a,b;
     char op;
 
@@ -13,31 +36,5 @@ int calculator() {
     printf("Donne moi le deuxieme nombre : \n");
     scanf("%lf", &b);
 
-    switch (op)
-    {
-    case '+':
-        printf("La somme est : %lf\n", a+b);
-        break;
-    case '-':
-        printf("La difference est : %lf\n", a-b);
-        break;
-    case '*':
-        printf("Le profuit est : %lf\n", a*b);;
-        break;
-    case '/':
-        if (b!= 0) {
-            printf("La division est : %lf\n", a/b);
-        } else {
-            printf("On ne peut pas diviser par 0");
-        }
-        break;
-    default:
-        printf("Vous n'avez pas choisi le bon opperateur arithmetique\n");
-        break;
-    }
-}
-
-int main() {
-    printf("\nLa calculatrice :\n");
-    calculator();
+    calculator(a, b, op);
 }
