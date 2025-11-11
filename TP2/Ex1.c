@@ -1,16 +1,11 @@
 //Ex qui calcule la valeur absolue d'un nombre
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    int a, abs;
-
+    int a;
     printf("Entrer une valeur :\t");
     scanf("%d", &a);
 
-    if (a < 0)
-        abs = a;
-    else 
-        abs = a;
-
-    printf("La valeur absolue de %d est : x=%d", a, abs);
+    printf("La valeur absolue de %d est : x=%d", a, abs(a));
 }
