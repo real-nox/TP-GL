@@ -1,3 +1,4 @@
+//Ecrire un programme C qui calcule le nombre d’occurrences de la valeur val dans un tableau Tab de N entiers (max.50). 
 #include <stdio.h>
 
 int main() {
