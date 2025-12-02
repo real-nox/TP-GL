@@ -4,7 +4,7 @@
 
 int main() {
     float T[max], X;
-    int res = 0, n;
+    int n, st=0, last=0, NO=0;
 
     do {
     printf("Entrer la taille du tableau :");
@@ -21,12 +21,10 @@ int main() {
 
     for (int j = 0; j < n; j++) {
         if (T[j] == X)
-            res = 1;
-            break;
+            NO++;
+            last = j;
+            if (NO == 1) st = j;
     }
 
-    if (res = 1)
-        printf("\nValeur %.2f est trouve!", X);
-    else
-        printf("\nValeur %.2f introuvable", X);
+    printf("\nValeur %.2f est trouve N %d! l'indice 1st : %d et last : %d", X, NO, st, last);
 }
