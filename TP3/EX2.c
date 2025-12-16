@@ -19,11 +19,32 @@ int main() {
     printf("\nEntrer la valeur dont vous chercher : ");
     scanf("%f", &X);
 
-    for (int j = 0; j < n; j++) {
+    /*for (int j = 0; j < n; j++) {
         if (T[j] == X)
             res = 1;
             break;
+    }*/
+
+    //Ou recherche dichotomique sur tableau trier
+    int debut = 0;
+    int m, fin = n;
+    
+    while (fin >= debut)
+    {
+        m = (debut+fin)/2;
+
+        if (T[m]==X) {
+            printf("Yay found");
+            break;
+        } else if (X < T[m]) {
+            fin = m-1;
+        } else {
+            debut = m+1;
+        }
     }
+    
+
+
 
     if (res = 1)
         printf("\nValeur %.2f est trouve!", X);
